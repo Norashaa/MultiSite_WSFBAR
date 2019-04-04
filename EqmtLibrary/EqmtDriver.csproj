@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{284E68B9-3FB5-4F10-B2C1-6A01A10402B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EqmtLibrary</RootNamespace>
+    <AssemblyName>EqmtLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ivi.Driver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NI_VST\VSTlibrary\Ivi.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="LabVIEWFilters">
+      <HintPath>NI_VST\VST_library\LabVIEWFilters\LabVIEWFilters.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Common, Version=15.1.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NI_VST\VSTlibrary\NationalInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.Common, Version=16.0.45.49152, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NI_VST\VSTlibrary\NationalInstruments.ModularInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.NIRfsa.Fx45, Version=16.0.0.49152, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NI_VST\VSTlibrary\NationalInstruments.ModularInstruments.NIRfsa.Fx45.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.NIRfsg.Fx45, Version=16.0.0.49152, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NI_VST\VSTlibrary\NationalInstruments.ModularInstruments.NIRfsg.Fx45.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NI_VST\Arrays\ArrayManipulation.cs" />
+    <Compile Include="NI_VST\Hardware\Instrument.cs" />
+    <Compile Include="NI_VST\Hardware\Transceiver.cs" />
+    <Compile Include="NI_VST\SignalProcessing\LVFilters.cs" />
+    <Compile Include="NI_VST\ITest.cs" />
+    <Compile Include="NI_VST\TestsImporter\FreqRespTest_Importer.cs" />
+    <Compile Include="NI_VST\TestsImporter\NoiseFloorTest_Importer.cs" />
+    <Compile Include="NI_VST\TestsImporter\PwrServoTest_Importer.cs" />
+    <Compile Include="NI_VST\Tests\PowerServo\PowerServoTest.cs" />
+    <Compile Include="NI_VST\VST_NI5646R.cs" />
+    <Compile Include="NI_VST\SignalProcessing\SignalAnalysis.cs" />
+    <Compile Include="NI_VST\SignalProcessing\SignalGeneration.cs" />
+    <Compile Include="NI_VST\Tests\FrequencyResponse\FrequencyResponseTest.cs" />
+    <Compile Include="NI_VST\Tests\NoiseFloor\NoiseFloorTest.cs" />
+    <Compile Include="NI_VST\Tests\NoiseFloor\NoiseFloorWaveformMode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSNRPZ\cRSNRPZ.cs" />
+    <Compile Include="RSNRPZ\Driver\eqmtRSNRPZ.cs" />
+    <Compile Include="RSNRPZ\Driver\rsnrpz.cs" />
+    <Compile Include="Utility\HiPerfTimer.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="NI_VST\VST_library\Ivi.Driver.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.Common.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.LabVIEW.Interop.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.LabVIEW.RefnumTypes.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.ModularInstruments.Common.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.ModularInstruments.NIRfsa.Fx45.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.ModularInstruments.NIRfsg.Fx45.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.MStudioCLM.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.NiLmClientDLL.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.SystemsEngineering.Debug.RFProbes.dll" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.SystemsEngineering.Debug.RFProbes.xml" />
+    <Content Include="NI_VST\VST_library\NationalInstruments.SystemsEngineering.Filters.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
