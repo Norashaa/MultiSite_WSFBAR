@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>NationalInstruments.SystemsEngineering.Debug.RFProbes</name>
+  </assembly>
+  <members>
+    <member name="M:NationalInstruments.SystemsEngineering.Debug.RFProbe.ComplexDoubleArrayProbe(System.Array)">
+      <summary></summary>
+      <returns>System.Int32</returns>
+    </member>
+  </members>
+</doc>
