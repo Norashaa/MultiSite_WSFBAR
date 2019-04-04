@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>NationalInstruments.SystemsEngineering.Filters</name>
+  </assembly>
+  <members>
+    <member name="M:NationalInstruments.SystemsEngineering.Filters.Filters.Initialize">
+      <summary>Initializes the LabVIEW RTE.</summary>
+      <returns>Void</returns>
+    </member>
+    <member name="M:NationalInstruments.SystemsEngineering.Filters.Filters.ComplexFilter(System.Double,System.Double,System.Int32,System.Double,System.Double,System.Double[,],System.Double[,])">
+      <summary></summary>
+      <returns>System.Double[,]</returns>
+    </member>
+  </members>
+</doc>
